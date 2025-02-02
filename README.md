@@ -9,7 +9,7 @@ Products/Tools:Kops, Kubernetes, AWS
 
 NOTES:
 
-COMMANDS
+KOPS
 
 #### Using Kops for kubernetes deployment on AWS ####
 
@@ -44,4 +44,20 @@ ssh -i kops ubuntu@api.kubernetes2.carlosengels.com
 kops delete cluster --yes
 
 
+
+#### EKS with kubectl
+
+### Set up eksctl
+curl --silent --location "https://github.com/eksctl-io/eksctl/releases/latest/download/eksctl_Linux_arm64.tar.gz" | tar xz -C /tmp
+sudo mv /tmp/eksctl /usr/local/bin
+
+### Deploy & delete cluster
+[create cluster.yaml file or use eksctl default]
+
+eksctl create cluster -f cluster.yaml
+
+eks delete cluster --name basic-cluster
+
+
+#### kubeadm, Packer, Terraform
 
