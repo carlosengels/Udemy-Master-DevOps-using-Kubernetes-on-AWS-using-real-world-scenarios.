@@ -5,7 +5,7 @@ URL: https://www.udemy.com/course/devops-projects-using-kubernetes-a-hands-on-gu
 
 Skills: DevOps/SRE/Platform Engineering
 
-Products/Tools:Kops, Kubernetes, AWS
+Products/Tools:Kops, Kubernetes, AWS, Packer, Ansible
 
 NOTES:
 
@@ -61,3 +61,16 @@ eks delete cluster --name basic-cluster
 
 #### kubeadm, Packer, Terraform
 
+### Packer Install
+sudo yum install -y yum-utils
+sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
+sudo yum -y install packer
+packer version
+
+### Install Ansible
+sudo yum update -y
+sudo yum install python3-pip -y
+sudo pip install ansible
+ansible --version
+
+### Make AMI
